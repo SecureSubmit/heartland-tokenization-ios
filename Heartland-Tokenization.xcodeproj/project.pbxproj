@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3DA7AAD1A7FDA640067172D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AAC1A7FDA640067172D /* main.m */; };
+		A3DA7AB01A7FDA640067172D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AAF1A7FDA640067172D /* AppDelegate.m */; };
+		A3DA7AB31A7FDA640067172D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AB21A7FDA640067172D /* ViewController.m */; };
+		A3DA7AB61A7FDA640067172D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DA7AB41A7FDA640067172D /* Main.storyboard */; };
+		A3DA7AB81A7FDA640067172D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA7AB71A7FDA640067172D /* Images.xcassets */; };
+		A3DA7ABB1A7FDA640067172D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DA7AB91A7FDA640067172D /* LaunchScreen.xib */; };
+		A3DA7AC71A7FDA640067172D /* Heartland_TokenizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3DA7AC11A7FDA640067172D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DA7A9F1A7FDA640067172D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DA7AA61A7FDA640067172D;
+			remoteInfo = "Heartland-Tokenization";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3DA7AA71A7FDA640067172D /* Heartland-Tokenization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heartland-Tokenization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA7AAB1A7FDA640067172D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA7AAC1A7FDA640067172D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3DA7AAE1A7FDA640067172D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A3DA7AAF1A7FDA640067172D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3DA7AB11A7FDA640067172D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A3DA7AB21A7FDA640067172D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A3DA7AB51A7FDA640067172D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3DA7AB71A7FDA640067172D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3DA7ABA1A7FDA640067172D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A3DA7AC01A7FDA640067172D /* Heartland-TokenizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heartland-TokenizationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA7AC51A7FDA640067172D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Heartland_TokenizationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3DA7AA41A7FDA640067172D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA7ABD1A7FDA640067172D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DA7A9E1A7FDA640067172D = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AA91A7FDA640067172D /* Heartland-Tokenization */,
+				A3DA7AC31A7FDA640067172D /* Heartland-TokenizationTests */,
+				A3DA7AA81A7FDA640067172D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3DA7AA81A7FDA640067172D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AA71A7FDA640067172D /* Heartland-Tokenization.app */,
+				A3DA7AC01A7FDA640067172D /* Heartland-TokenizationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DA7AA91A7FDA640067172D /* Heartland-Tokenization */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AAE1A7FDA640067172D /* AppDelegate.h */,
+				A3DA7AAF1A7FDA640067172D /* AppDelegate.m */,
+				A3DA7AB11A7FDA640067172D /* ViewController.h */,
+				A3DA7AB21A7FDA640067172D /* ViewController.m */,
+				A3DA7AB41A7FDA640067172D /* Main.storyboard */,
+				A3DA7AB71A7FDA640067172D /* Images.xcassets */,
+				A3DA7AB91A7FDA640067172D /* LaunchScreen.xib */,
+				A3DA7AAA1A7FDA640067172D /* Supporting Files */,
+			);
+			path = "Heartland-Tokenization";
+			sourceTree = "<group>";
+		};
+		A3DA7AAA1A7FDA640067172D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AAB1A7FDA640067172D /* Info.plist */,
+				A3DA7AAC1A7FDA640067172D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3DA7AC31A7FDA640067172D /* Heartland-TokenizationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */,
+				A3DA7AC41A7FDA640067172D /* Supporting Files */,
+			);
+			path = "Heartland-TokenizationTests";
+			sourceTree = "<group>";
+		};
+		A3DA7AC41A7FDA640067172D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AC51A7FDA640067172D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3DA7AA61A7FDA640067172D /* Heartland-Tokenization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DA7ACA1A7FDA640067172D /* Build configuration list for PBXNativeTarget "Heartland-Tokenization" */;
+			buildPhases = (
+				A3DA7AA31A7FDA640067172D /* Sources */,
+				A3DA7AA41A7FDA640067172D /* Frameworks */,
+				A3DA7AA51A7FDA640067172D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Heartland-Tokenization";
+			productName = "Heartland-Tokenization";
+			productReference = A3DA7AA71A7FDA640067172D /* Heartland-Tokenization.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3DA7ABF1A7FDA640067172D /* Heartland-TokenizationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DA7ACD1A7FDA640067172D /* Build configuration list for PBXNativeTarget "Heartland-TokenizationTests" */;
+			buildPhases = (
+				A3DA7ABC1A7FDA640067172D /* Sources */,
+				A3DA7ABD1A7FDA640067172D /* Frameworks */,
+				A3DA7ABE1A7FDA640067172D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DA7AC21A7FDA640067172D /* PBXTargetDependency */,
+			);
+			name = "Heartland-TokenizationTests";
+			productName = "Heartland-TokenizationTests";
+			productReference = A3DA7AC01A7FDA640067172D /* Heartland-TokenizationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3DA7A9F1A7FDA640067172D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Heartland Payment Systems";
+				TargetAttributes = {
+					A3DA7AA61A7FDA640067172D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A3DA7ABF1A7FDA640067172D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A3DA7AA61A7FDA640067172D;
+					};
+				};
+			};
+			buildConfigurationList = A3DA7AA21A7FDA640067172D /* Build configuration list for PBXProject "Heartland-Tokenization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3DA7A9E1A7FDA640067172D;
+			productRefGroup = A3DA7AA81A7FDA640067172D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3DA7AA61A7FDA640067172D /* Heartland-Tokenization */,
+				A3DA7ABF1A7FDA640067172D /* Heartland-TokenizationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3DA7AA51A7FDA640067172D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA7AB61A7FDA640067172D /* Main.storyboard in Resources */,
+				A3DA7ABB1A7FDA640067172D /* LaunchScreen.xib in Resources */,
+				A3DA7AB81A7FDA640067172D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA7ABE1A7FDA640067172D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3DA7AA31A7FDA640067172D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA7AB31A7FDA640067172D /* ViewController.m in Sources */,
+				A3DA7AB01A7FDA640067172D /* AppDelegate.m in Sources */,
+				A3DA7AAD1A7FDA640067172D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA7ABC1A7FDA640067172D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA7AC71A7FDA640067172D /* Heartland_TokenizationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3DA7AC21A7FDA640067172D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DA7AA61A7FDA640067172D /* Heartland-Tokenization */;
+			targetProxy = A3DA7AC11A7FDA640067172D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3DA7AB41A7FDA640067172D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DA7AB51A7FDA640067172D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3DA7AB91A7FDA640067172D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DA7ABA1A7FDA640067172D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3DA7AC81A7FDA640067172D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3DA7AC91A7FDA640067172D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3DA7ACB1A7FDA640067172D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Heartland-Tokenization/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3DA7ACC1A7FDA640067172D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Heartland-Tokenization/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A3DA7ACE1A7FDA640067172D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Heartland-TokenizationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heartland-Tokenization.app/Heartland-Tokenization";
+			};
+			name = Debug;
+		};
+		A3DA7ACF1A7FDA640067172D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Heartland-TokenizationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heartland-Tokenization.app/Heartland-Tokenization";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DA7AA21A7FDA640067172D /* Build configuration list for PBXProject "Heartland-Tokenization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA7AC81A7FDA640067172D /* Debug */,
+				A3DA7AC91A7FDA640067172D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DA7ACA1A7FDA640067172D /* Build configuration list for PBXNativeTarget "Heartland-Tokenization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA7ACB1A7FDA640067172D /* Debug */,
+				A3DA7ACC1A7FDA640067172D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3DA7ACD1A7FDA640067172D /* Build configuration list for PBXNativeTarget "Heartland-TokenizationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA7ACE1A7FDA640067172D /* Debug */,
+				A3DA7ACF1A7FDA640067172D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3DA7A9F1A7FDA640067172D /* Project object */;
+}
