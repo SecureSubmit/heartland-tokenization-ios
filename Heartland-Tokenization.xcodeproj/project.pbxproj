@@ -14,6 +14,10 @@
 		A3DA7AB81A7FDA640067172D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA7AB71A7FDA640067172D /* Images.xcassets */; };
 		A3DA7ABB1A7FDA640067172D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DA7AB91A7FDA640067172D /* LaunchScreen.xib */; };
 		A3DA7AC71A7FDA640067172D /* Heartland_TokenizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */; };
+		A3DA7AD51A7FDB160067172D /* TokenService.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AD41A7FDB160067172D /* TokenService.m */; };
+		A3DA7AD61A7FDB160067172D /* TokenService.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AD41A7FDB160067172D /* TokenService.m */; };
+		A3DA7AD91A7FDB750067172D /* TokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AD81A7FDB750067172D /* TokenResponse.m */; };
+		A3DA7ADA1A7FDB750067172D /* TokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AD81A7FDB750067172D /* TokenResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		A3DA7AC01A7FDA640067172D /* Heartland-TokenizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Heartland-TokenizationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA7AC51A7FDA640067172D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Heartland_TokenizationTests.m; sourceTree = "<group>"; };
+		A3DA7AD11A7FDAC10067172D /* TokenService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenService.h; sourceTree = "<group>"; };
+		A3DA7AD41A7FDB160067172D /* TokenService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenService.m; sourceTree = "<group>"; };
+		A3DA7AD71A7FDB750067172D /* TokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TokenResponse.h; sourceTree = "<group>"; };
+		A3DA7AD81A7FDB750067172D /* TokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TokenResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		A3DA7AA91A7FDA640067172D /* Heartland-Tokenization */ = {
 			isa = PBXGroup;
 			children = (
+				A3DA7AD01A7FDA870067172D /* SDK */,
 				A3DA7AAE1A7FDA640067172D /* AppDelegate.h */,
 				A3DA7AAF1A7FDA640067172D /* AppDelegate.m */,
 				A3DA7AB11A7FDA640067172D /* ViewController.h */,
@@ -117,6 +126,17 @@
 				A3DA7AC51A7FDA640067172D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3DA7AD01A7FDA870067172D /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA7AD11A7FDAC10067172D /* TokenService.h */,
+				A3DA7AD41A7FDB160067172D /* TokenService.m */,
+				A3DA7AD71A7FDB750067172D /* TokenResponse.h */,
+				A3DA7AD81A7FDB750067172D /* TokenResponse.m */,
+			);
+			name = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DA7AD91A7FDB750067172D /* TokenResponse.m in Sources */,
 				A3DA7AB31A7FDA640067172D /* ViewController.m in Sources */,
+				A3DA7AD51A7FDB160067172D /* TokenService.m in Sources */,
 				A3DA7AB01A7FDA640067172D /* AppDelegate.m in Sources */,
 				A3DA7AAD1A7FDA640067172D /* main.m in Sources */,
 			);
@@ -230,6 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3DA7AC71A7FDA640067172D /* Heartland_TokenizationTests.m in Sources */,
+				A3DA7AD61A7FDB160067172D /* TokenService.m in Sources */,
+				A3DA7ADA1A7FDB750067172D /* TokenResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

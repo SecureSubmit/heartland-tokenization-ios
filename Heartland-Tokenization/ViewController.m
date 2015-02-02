@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TokenService.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,43 @@
 
 @implementation ViewController
 
+@synthesize cardNumberField=_cardNumberField;
+@synthesize cvvField=_cvvField;
+@synthesize expDatePicker=_expDatePicker;
+@synthesize tokenResultLabel=_tokenResultLabel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)submitButtonClicked:(id)sender {
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth|NSCalendarUnitYear
+                                                                   fromDate:self.expDatePicker.date];
+    
+    long cardNumber = [self.cardNumberField.text longLongValue];
+    int cvv = [self.cvvField.text intValue];
+    int expMonth = (int)[components month];
+    int expYear = (int)[components year];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:@"pkapi_cert_P6dRqs1LzfWJ6HgGVZ"];
+    
+    [service getTokenWithCardNumber:cardNumber
+                                cvc:cvv
+                           expMonth:expMonth
+                            expYear:expYear
+                   andResponseBlock:^(TokenResponse *response) {
+                       
+                       if([response.type isEqualToString:@"error"]) {
+                           self.tokenResultLabel.text = response.message;
+                       }
+                       else {
+                           self.tokenResultLabel.text = response.tokenValue;
+                       }
+                       
+                   }];
 }
 
 @end

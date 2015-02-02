@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "TokenService.h"
+#import "TokenResponse.h"
 
 @interface Heartland_TokenizationTests : XCTestCase
+
+@property (nonatomic, strong) NSString *publicKey;
 
 @end
 
@@ -17,24 +21,215 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.publicKey = @"pkapi_cert_P6dRqs1LzfWJ6HgGVZ";
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void) timeoutErrorHandler:(NSError *)error
+{
+    if (error) {
+        XCTFail(@"Request Timed out");
+    }
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)test_valid_card_should_return_token {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:12
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertTrue([response.type isEqualToString:@"token"]);
+                       XCTAssertNotNil(response.tokenValue, @"tokenValue nil");
+                       XCTAssertNotNil(response.tokenType, @"tokenType nil");
+                       XCTAssertNotNil(response.tokenExpire, @"tokenExpire nil");
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
     }];
 }
+
+- (void)test_valid_card_error_shoud_be_null {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:12
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertFalse([response.type isEqualToString:@"error"]);
+                       XCTAssertNil(response.param);
+                       XCTAssertNil(response.message);
+                       XCTAssertNil(response.code);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_invalid_number_returns_error {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:0
+                                cvc:123
+                           expMonth:12
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.number"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card number is invalid."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_long_card_number_returns_error{
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:111111111111111111
+                                cvc:123
+                           expMonth:12
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.number"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card number is not a recognized brand."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_exp_month_low_returns_error{
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:0
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.exp_month"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card expiration month is invalid."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_exp_month_high_returns_error{
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:13
+                            expYear:2015
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.exp_month"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card expiration month is invalid."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_invalid_exp_year_returns_error{
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:12
+                            expYear:12
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.exp_year"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card expiration year is invalid."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
+- (void)test_invalid_exp_year__under_2000_returns_error{
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenWithCardNumber:4242424242424242
+                                cvc:123
+                           expMonth:12
+                            expYear:1999
+                   andResponseBlock:^(TokenResponse *response) {
+                       XCTAssertNil(response.tokenType);
+                       XCTAssertNil(response.tokenValue);
+                       XCTAssertTrue([response.type isEqualToString:@"error"]);
+                       XCTAssertTrue([response.code isEqualToString:@"2"]);
+                       XCTAssertTrue([response.param isEqualToString:@"card.exp_year"]);
+                       XCTAssertTrue([response.message isEqualToString:@"Card expiration year is invalid."]);
+                       [expectation fulfill];
+                   }];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
+
 
 @end

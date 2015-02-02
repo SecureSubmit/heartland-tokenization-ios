@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="4242424242424242" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDF-AD-kg0">
+                                <rect key="frame" x="224" y="181" width="153" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Card Number"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <datePicker contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5lX-fZ-vhA">
+                                <rect key="frame" x="0.0" y="257" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="444593219.22287399">
+                                    <!--2015-02-02 18:06:59 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc3-Sx-Ndl">
+                                <rect key="frame" x="256" y="427" width="89" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjs-1s-atP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-m9-SIm">
+                                <rect key="frame" x="16" y="465" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-Ni-aQM">
+                                <rect key="frame" x="277" y="219" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="CDF-AD-kg0" secondAttribute="centerX" id="10j-IN-N7O"/>
+                            <constraint firstAttribute="centerY" secondItem="5lX-fZ-vhA" secondAttribute="centerY" id="1Lz-7Z-FWE"/>
+                            <constraint firstItem="CDF-AD-kg0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="2at-zD-4mv"/>
+                            <constraint firstAttribute="centerX" secondItem="CDF-AD-kg0" secondAttribute="centerX" id="8aw-ky-Dp5"/>
+                            <constraint firstAttribute="centerX" secondItem="gc3-Sx-Ndl" secondAttribute="centerX" id="9sf-Uv-fOX"/>
+                            <constraint firstAttribute="centerX" secondItem="CDF-AD-kg0" secondAttribute="centerX" id="Dwf-dx-Cl6"/>
+                            <constraint firstItem="ceq-Ni-aQM" firstAttribute="top" secondItem="CDF-AD-kg0" secondAttribute="bottom" constant="8" id="Fqm-zf-Qzx"/>
+                            <constraint firstItem="gc3-Sx-Ndl" firstAttribute="top" secondItem="5lX-fZ-vhA" secondAttribute="bottom" constant="8" id="Hyj-nY-Qty"/>
+                            <constraint firstItem="gc3-Sx-Ndl" firstAttribute="top" secondItem="5lX-fZ-vhA" secondAttribute="bottom" constant="8" id="IhG-kp-VRG"/>
+                            <constraint firstItem="5lX-fZ-vhA" firstAttribute="top" secondItem="ceq-Ni-aQM" secondAttribute="bottom" constant="8" id="IqI-vE-Vrx"/>
+                            <constraint firstAttribute="centerX" secondItem="ffl-m9-SIm" secondAttribute="centerX" id="Mwe-sZ-RaP"/>
+                            <constraint firstAttribute="centerX" secondItem="CDF-AD-kg0" secondAttribute="centerX" id="aH1-KF-UaJ"/>
+                            <constraint firstAttribute="centerX" secondItem="ceq-Ni-aQM" secondAttribute="centerX" id="d8O-zK-RnH"/>
+                            <constraint firstAttribute="centerX" secondItem="5lX-fZ-vhA" secondAttribute="centerX" id="fNu-M2-qK2"/>
+                            <constraint firstAttribute="centerY" secondItem="CDF-AD-kg0" secondAttribute="centerY" id="gm6-Xb-GKX"/>
+                            <constraint firstItem="ffl-m9-SIm" firstAttribute="top" secondItem="gc3-Sx-Ndl" secondAttribute="bottom" constant="8" id="klb-wr-iEJ"/>
+                            <constraint firstAttribute="centerY" secondItem="CDF-AD-kg0" secondAttribute="centerY" id="pQS-Qq-uCX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Lz-7Z-FWE"/>
+                                <exclude reference="fNu-M2-qK2"/>
+                                <exclude reference="8aw-ky-Dp5"/>
+                                <exclude reference="Dwf-dx-Cl6"/>
+                                <exclude reference="aH1-KF-UaJ"/>
+                                <exclude reference="gm6-Xb-GKX"/>
+                                <exclude reference="pQS-Qq-uCX"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cardNumberField" destination="CDF-AD-kg0" id="eyy-pq-r9w"/>
+                        <outlet property="cvvField" destination="ceq-Ni-aQM" id="9q1-85-Pfc"/>
+                        <outlet property="expDatePicker" destination="5lX-fZ-vhA" id="ap1-Ux-ctz"/>
+                        <outlet property="tokenResultLabel" destination="ffl-m9-SIm" id="2QT-b7-WTT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
