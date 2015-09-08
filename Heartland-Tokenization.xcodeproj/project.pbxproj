@@ -59,6 +59,7 @@
 		A364A72E1B9FA3A7000866FD /* HpsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HpsService.h; sourceTree = "<group>"; };
 		A364A72F1B9FA3A7000866FD /* HpsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HpsService.m; sourceTree = "<group>"; };
 		A364A7321B9FA433000866FD /* Heartland_GatewayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heartland_GatewayTests.m; sourceTree = "<group>"; };
+		A364A7351B9FA712000866FD /* hps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hps.h; sourceTree = "<group>"; };
 		A3DA7AA71A7FDA640067172D /* Heartland-Tokenization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heartland-Tokenization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA7AAB1A7FDA640067172D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DA7AAC1A7FDA640067172D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 				A3DA7AD41A7FDB160067172D /* TokenService.m */,
 				A3DA7AD71A7FDB750067172D /* TokenResponse.h */,
 				A3DA7AD81A7FDB750067172D /* TokenResponse.m */,
+				A364A7351B9FA712000866FD /* hps.h */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
