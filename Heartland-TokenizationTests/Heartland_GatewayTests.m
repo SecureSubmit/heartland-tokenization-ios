@@ -18,6 +18,9 @@
 
 - (void) testCreditSale
 {
+    /** NOTE: Do not include your gateway credentials in your application if you plan to distribute in the AppStore.
+        This data can be easily obtained by decompiling the application on a jail broke phone. */
+    #warning Do not compile your SecretApiKey into the application
     HpsServicesConfig *config = [[HpsServicesConfig alloc]
                                  initWithSecretApiKey:@"skapi_cert_MYl2AQAowiQAbLp5JesGKh7QFkcizOP2jcX9BrEMqQ"
                                  developerId:@"123456"
