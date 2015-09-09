@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "TokenService.h"
-#import "TokenResponse.h"
+#import "hps.h"
 
 @interface Heartland_TokenizationTests : XCTestCase
 

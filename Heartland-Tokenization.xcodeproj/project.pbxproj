@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A364A71E1B9FA212000866FD /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A7181B9FA212000866FD /* tinystr.cpp */; };
+		A364A71F1B9FA212000866FD /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A7181B9FA212000866FD /* tinystr.cpp */; };
+		A364A7201B9FA212000866FD /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71A1B9FA212000866FD /* tinyxml.cpp */; };
+		A364A7211B9FA212000866FD /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71A1B9FA212000866FD /* tinyxml.cpp */; };
+		A364A7221B9FA212000866FD /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71C1B9FA212000866FD /* tinyxmlerror.cpp */; };
+		A364A7231B9FA212000866FD /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71C1B9FA212000866FD /* tinyxmlerror.cpp */; };
+		A364A7241B9FA212000866FD /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71D1B9FA212000866FD /* tinyxmlparser.cpp */; };
+		A364A7251B9FA212000866FD /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A364A71D1B9FA212000866FD /* tinyxmlparser.cpp */; };
+		A364A7281B9FA28E000866FD /* SoapHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A364A7271B9FA28E000866FD /* SoapHandler.mm */; };
+		A364A7291B9FA28E000866FD /* SoapHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = A364A7271B9FA28E000866FD /* SoapHandler.mm */; };
+		A364A72C1B9FA2D4000866FD /* HpsServicesConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A364A72B1B9FA2D4000866FD /* HpsServicesConfig.m */; };
+		A364A72D1B9FA2D4000866FD /* HpsServicesConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A364A72B1B9FA2D4000866FD /* HpsServicesConfig.m */; };
+		A364A7301B9FA3A7000866FD /* HpsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A364A72F1B9FA3A7000866FD /* HpsService.m */; };
+		A364A7311B9FA3A7000866FD /* HpsService.m in Sources */ = {isa = PBXBuildFile; fileRef = A364A72F1B9FA3A7000866FD /* HpsService.m */; };
+		A364A7341B9FA433000866FD /* Heartland_GatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A364A7321B9FA433000866FD /* Heartland_GatewayTests.m */; };
 		A3DA7AAD1A7FDA640067172D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AAC1A7FDA640067172D /* main.m */; };
 		A3DA7AB01A7FDA640067172D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AAF1A7FDA640067172D /* AppDelegate.m */; };
 		A3DA7AB31A7FDA640067172D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3DA7AB21A7FDA640067172D /* ViewController.m */; };
@@ -31,6 +46,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A364A7181B9FA212000866FD /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		A364A7191B9FA212000866FD /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		A364A71A1B9FA212000866FD /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		A364A71B1B9FA212000866FD /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		A364A71C1B9FA212000866FD /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		A364A71D1B9FA212000866FD /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		A364A7261B9FA28E000866FD /* SoapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapHandler.h; sourceTree = "<group>"; };
+		A364A7271B9FA28E000866FD /* SoapHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SoapHandler.mm; sourceTree = "<group>"; };
+		A364A72A1B9FA2D4000866FD /* HpsServicesConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HpsServicesConfig.h; sourceTree = "<group>"; };
+		A364A72B1B9FA2D4000866FD /* HpsServicesConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HpsServicesConfig.m; sourceTree = "<group>"; };
+		A364A72E1B9FA3A7000866FD /* HpsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HpsService.h; sourceTree = "<group>"; };
+		A364A72F1B9FA3A7000866FD /* HpsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HpsService.m; sourceTree = "<group>"; };
+		A364A7321B9FA433000866FD /* Heartland_GatewayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heartland_GatewayTests.m; sourceTree = "<group>"; };
+		A364A7351B9FA712000866FD /* hps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hps.h; sourceTree = "<group>"; };
 		A3DA7AA71A7FDA640067172D /* Heartland-Tokenization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heartland-Tokenization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA7AAB1A7FDA640067172D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3DA7AAC1A7FDA640067172D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +97,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A364A7171B9FA212000866FD /* TinyXml */ = {
+			isa = PBXGroup;
+			children = (
+				A364A7181B9FA212000866FD /* tinystr.cpp */,
+				A364A7191B9FA212000866FD /* tinystr.h */,
+				A364A71A1B9FA212000866FD /* tinyxml.cpp */,
+				A364A71B1B9FA212000866FD /* tinyxml.h */,
+				A364A71C1B9FA212000866FD /* tinyxmlerror.cpp */,
+				A364A71D1B9FA212000866FD /* tinyxmlparser.cpp */,
+			);
+			path = TinyXml;
+			sourceTree = "<group>";
+		};
 		A3DA7A9E1A7FDA640067172D = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DA7AC61A7FDA640067172D /* Heartland_TokenizationTests.m */,
+				A364A7321B9FA433000866FD /* Heartland_GatewayTests.m */,
 				A3DA7AC41A7FDA640067172D /* Supporting Files */,
 			);
 			path = "Heartland-TokenizationTests";
@@ -131,10 +174,18 @@
 		A3DA7AD01A7FDA870067172D /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				A364A7171B9FA212000866FD /* TinyXml */,
+				A364A7261B9FA28E000866FD /* SoapHandler.h */,
+				A364A7271B9FA28E000866FD /* SoapHandler.mm */,
+				A364A72A1B9FA2D4000866FD /* HpsServicesConfig.h */,
+				A364A72B1B9FA2D4000866FD /* HpsServicesConfig.m */,
+				A364A72E1B9FA3A7000866FD /* HpsService.h */,
+				A364A72F1B9FA3A7000866FD /* HpsService.m */,
 				A3DA7AD11A7FDAC10067172D /* TokenService.h */,
 				A3DA7AD41A7FDB160067172D /* TokenService.m */,
 				A3DA7AD71A7FDB750067172D /* TokenResponse.h */,
 				A3DA7AD81A7FDB750067172D /* TokenResponse.m */,
+				A364A7351B9FA712000866FD /* hps.h */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -239,11 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A364A7221B9FA212000866FD /* tinyxmlerror.cpp in Sources */,
+				A364A7241B9FA212000866FD /* tinyxmlparser.cpp in Sources */,
 				A3DA7AD91A7FDB750067172D /* TokenResponse.m in Sources */,
+				A364A71E1B9FA212000866FD /* tinystr.cpp in Sources */,
 				A3DA7AB31A7FDA640067172D /* ViewController.m in Sources */,
 				A3DA7AD51A7FDB160067172D /* TokenService.m in Sources */,
+				A364A7201B9FA212000866FD /* tinyxml.cpp in Sources */,
+				A364A7281B9FA28E000866FD /* SoapHandler.mm in Sources */,
 				A3DA7AB01A7FDA640067172D /* AppDelegate.m in Sources */,
+				A364A72C1B9FA2D4000866FD /* HpsServicesConfig.m in Sources */,
 				A3DA7AAD1A7FDA640067172D /* main.m in Sources */,
+				A364A7301B9FA3A7000866FD /* HpsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A364A7231B9FA212000866FD /* tinyxmlerror.cpp in Sources */,
+				A364A7311B9FA3A7000866FD /* HpsService.m in Sources */,
 				A3DA7AC71A7FDA640067172D /* Heartland_TokenizationTests.m in Sources */,
+				A364A7211B9FA212000866FD /* tinyxml.cpp in Sources */,
+				A364A7251B9FA212000866FD /* tinyxmlparser.cpp in Sources */,
+				A364A71F1B9FA212000866FD /* tinystr.cpp in Sources */,
 				A3DA7AD61A7FDB160067172D /* TokenService.m in Sources */,
+				A364A72D1B9FA2D4000866FD /* HpsServicesConfig.m in Sources */,
 				A3DA7ADA1A7FDB750067172D /* TokenResponse.m in Sources */,
+				A364A7341B9FA433000866FD /* Heartland_GatewayTests.m in Sources */,
+				A364A7291B9FA28E000866FD /* SoapHandler.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +504,7 @@
 				A3DA7ACC1A7FDA640067172D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3DA7ACD1A7FDA640067172D /* Build configuration list for PBXNativeTarget "Heartland-TokenizationTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +513,7 @@
 				A3DA7ACF1A7FDA640067172D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
