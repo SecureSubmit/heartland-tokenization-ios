@@ -31,7 +31,6 @@
 }
 
 - (NSDictionary *) doTransaction:(NSDictionary *)transaction
-                           error:(NSError *__autoreleasing *)error
 {
     if( [self isConfigInvalid] )
     {

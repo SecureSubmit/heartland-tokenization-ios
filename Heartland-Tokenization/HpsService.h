@@ -14,7 +14,6 @@
 
 - (id) initWithConfig:(HpsServicesConfig *) config;
 
-- (NSDictionary *) doTransaction:(NSDictionary *)transaction
-                           error:(NSError **) error;
+- (NSDictionary *) doTransaction:(NSDictionary *)transaction;
 
 @end
