@@ -73,7 +73,7 @@
     }
     
     
-    NSDictionary *posRequest = @{ @"PosRequest": @{ @"Ver1.0": @{ @"Transaction": transaction, @"Header": header }}};
+    NSDictionary *posRequest = @{ @"PosRequest": @{ @"Ver1.0": @{ @"Header": header, @"Transaction": transaction }}};
     
     NSString *requestXML = [SoapHandler toSoap:posRequest
                                      namespace:PorticoDefaultXmlns
