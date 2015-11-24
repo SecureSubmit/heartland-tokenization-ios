@@ -54,7 +54,7 @@
         }
         else
         {
-            self.config.serviceUri = @"https://posgateway.cert.secureexchange.net/Hps.Exchange.PosGateway/PosGatewayService.asmx";
+            self.config.serviceUri = @"https://cert.api2.heartlandportico.com/Hps.Exchange.PosGateway/PosGatewayService.asmx";
         }
     }
     else
