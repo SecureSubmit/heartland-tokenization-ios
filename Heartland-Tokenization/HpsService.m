@@ -71,8 +71,8 @@
         };
     }
     
-    
-    NSDictionary *posRequest = @{ @"PosRequest": @{ @"Ver1.0": @{ @"Header": header, @"Transaction": transaction }}};
+    //The order of XML nodes are important and will cause issues if Transaction is before Header.
+    NSDictionary *posRequest = @{ @"PosRequest": @{ @"Ver1.0": @{ @"Transaction": transaction, @"Header": header }}};
     
     NSString *requestXML = [SoapHandler toSoap:posRequest
                                      namespace:PorticoDefaultXmlns
