@@ -56,6 +56,29 @@
         if(error) XCTFail(@"Request Timed out");
     }];
 }
+- (void)test_valid_card_from_strings_should_return_token {
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Async Test"];
+    
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
+    
+    [service getTokenFromStringsWithCardNumber:@"4242424242424242"
+                                           cvc:@"023"
+                                      expMonth:@"12"
+                                       expYear:@"2017"
+                              andResponseBlock:^(TokenResponse *response) {
+                                  XCTAssertTrue([response.type isEqualToString:@"token"]);
+                                  XCTAssertNotNil(response.tokenValue, @"tokenValue nil");
+                                  XCTAssertNotNil(response.tokenType, @"tokenType nil");
+                                  XCTAssertNotNil(response.tokenExpire, @"tokenExpire nil");
+                                  [expectation fulfill];
+                              }];
+    
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if(error) XCTFail(@"Request Timed out");
+    }];
+}
 
 - (void)test_valid_card_error_shoud_be_null {
     

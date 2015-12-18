@@ -55,11 +55,27 @@
     return self;
 }
 
+//DEPRECATED - Integer based
+//Integers for CVC with leading zeros are not padded correctly, and we will be deprecating this method in our new SDK.
+
 - (void) getTokenWithCardNumber:(long long)cardNumber
                             cvc:(int)cvc
                        expMonth:(int)expMonth
                         expYear:(int)expYear
                andResponseBlock:(void(^)(TokenResponse*))responseBlock
+{
+    [self getTokenFromStringsWithCardNumber: [@(cardNumber) stringValue]
+                                        cvc: [@(cvc) stringValue]
+                                   expMonth: [@(expMonth) stringValue]
+                                    expYear: [@(expYear) stringValue]
+                           andResponseBlock:responseBlock];
+    
+}
+- (void) getTokenFromStringsWithCardNumber:(NSString*)cardNumber
+                                       cvc:(NSString*)cvc
+                                  expMonth:(NSString*)expMonth
+                                   expYear:(NSString*)expYear
+                          andResponseBlock:(void(^)(TokenResponse*))responseBlock
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.serviceURL]
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
@@ -70,10 +86,10 @@
     NSString *authorization = [NSString stringWithFormat:@"Basic %@", [apiKey base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]];
     
     NSDictionary *card = [NSDictionary dictionaryWithObjectsAndKeys:
-                          [@(cardNumber) stringValue], @"number",
-                          [@(cvc) stringValue], @"cvc",
-                          [@(expMonth) stringValue], @"exp_month",
-                          [@(expYear) stringValue], @"exp_year", nil];
+                          cardNumber, @"number",
+                          cvc, @"cvc",
+                          expMonth, @"exp_month",
+                          expYear, @"exp_year", nil];
     
     NSDictionary *token = [NSDictionary dictionaryWithObjectsAndKeys:
                            @"token", @"object",
