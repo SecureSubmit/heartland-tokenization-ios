@@ -18,5 +18,9 @@
                        expMonth:(int)expMonth
                         expYear:(int)expYear
                andResponseBlock:(void(^)(TokenResponse*))responseBlock;
-
+- (void) getTokenFromStringsWithCardNumber:(NSString*)cardNumber
+                                       cvc:(NSString*)cvc
+                                  expMonth:(NSString*)expMonth
+                                   expYear:(NSString*)expYear
+                          andResponseBlock:(void(^)(TokenResponse*))responseBlock;
 @end
