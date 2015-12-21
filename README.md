@@ -36,7 +36,7 @@ Below is an example of all that is required to convert sensitive card informatio
 
     //For serialized data as NSStrings instead of integers
     //Initialize with your key
-    HpsTokenService *service = [[HpsTokenService alloc] initWithPublicKey:self.publicKey];
+    TokenService *service = [[TokenService alloc] initWithPublicKey:self.publicKey];
     
     //Call the service
     [service getTokenFromStringsWithCardNumber:@"4242424242424242"
