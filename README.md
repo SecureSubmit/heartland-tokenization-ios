@@ -5,7 +5,6 @@
 
 Please remove all previous SDK files from your project, and use the new cocoapods supported SDK.
 
-https://github.com/hps/heartland-ios
 
 
  
