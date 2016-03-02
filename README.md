@@ -1,4 +1,4 @@
-  ## Heartland SecureSubmit Tokenization for iOS (DEPRECATED)
+## Heartland SecureSubmit Tokenization for iOS (DEPRECATED)
 >This project is deprecated.
 
 #####Please move to our new iOS SDK with cocoapod support:  https://github.com/hps/heartland-ios
